@@ -25,7 +25,7 @@ each of which has a corresponding port:
 {% for host, port in runtime_info.available_hosts.items() -%}
 * {{ host }} (port {{ port }})
 {% endfor %}
-When starting a web server, use the corresponding ports. You should also
+When starting a web server, use the corresponding ports (it should be the same as APP_PORT_1 and APP_PORT_2 in the environment variables, prefer referencing the environment variables as opposed to hardcoding the ports). You should also
 set any options to allow iframes and CORS requests, and allow the server to
 be accessed from any host (e.g. 0.0.0.0).
 For example, if you are using vite.config.js, you should set server.host and server.allowedHosts to true
